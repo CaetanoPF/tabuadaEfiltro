@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada Automática</title>
+
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #resultado {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1>Tabuada</h1>
+    <form action="tabuada.html">
+        <label for="">Informe um número:</label>
+        <input type="number" name="" id="multiplicador" class="input" oninput="calcular()">
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+        function calcular() {
+            const multiplicador = Number(document.getElementById("multiplicador").value);
+            const multiplicando = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            document.getElementById("resultado").innerHTML = '';
+
+            for (const numero of multiplicando) {
+                let produto = multiplicador * numero;
+                document.getElementById("resultado").innerHTML += `${multiplicador} * ${numero} = ${produto} <br>`;
+            }
+        }
+    </script>
+</body>
+
+</html>

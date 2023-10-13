@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomes</title>
+
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input,
+        label,
+        h1 {
+            margin-left: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Seletor de Nomes</h1>
+
+    <form action="nomes.html">
+        <label for="">Informe um nome:</label>
+        <input type="text" name="campo_nome" id="nome" oninput="filtrar()">
+    </form>
+
+    <ul>
+        <li>Adriana</li>
+        <li>Ana Clara</li>
+        <li>Bruno</li>
+        <li>Carla</li>
+        <li>Daniel</li>
+        <li>Eduardo</li>
+        <li>Elisa</li>
+        <li>Fernanda</li>
+        <li>Gustavo</li>
+        <li>Gabriel</li>
+        <li>Helena</li>
+        <li>Isabela</li>
+        <li>João</li>
+        <li>Karen</li>
+        <li>Lucas</li>
+        <li>Mariana</li>
+        <li>Natália</li>
+        <li>Oscar</li>
+        <li>Olivia</li>
+        <li>Paula</li>
+        <li>Rafael</li>
+        <li>Sofia</li>
+        <li>Suzana</li>
+        <li>Thiago</li>
+        <li>Valentina</li>
+        <li>Vitor</li>
+    </ul>
+
+    <script>
+        function filtrar() {
+            let nome = document.getElementById("nome").value.toLowerCase();
+            let listas = document.getElementsByTagName("li");
+
+            for (const filtro of listas) {
+                if (nome === '') {
+                    filtro.style.fontWeight = 'normal';
+                }
+                else if (filtro.innerText.toLowerCase().startsWith(nome)) {
+                    filtro.style.fontWeight = 'bold';
+                } else {
+                    filtro.style.fontWeight = 'normal';
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
