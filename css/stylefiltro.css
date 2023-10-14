@@ -1,0 +1,9 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input,
+label,
+h1 {
+    margin-left: 22px;
+}
