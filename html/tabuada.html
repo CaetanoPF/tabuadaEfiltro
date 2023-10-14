@@ -11,26 +11,28 @@
 </head>
 
 <body>
-    <h1>Tabuada</h1>
-    <form action="tabuada.html">
-        <label for="">Informe um número:</label>
-        <input type="number" name="" id="multiplicador" class="input" oninput="calcular()">
-    </form>
+    <main>
+        <h1>Tabuada</h1>
+        <form action="tabuada.html">
+            <label for="">Informe um número:</label>
+            <input type="number" name="" id="multiplicador" class="input" oninput="calcular()">
+        </form>
 
-    <div id="resultado"></div>
+        <div id="resultado"></div>
 
-    <script>
-        function calcular() {
-            const multiplicador = Number(document.getElementById("multiplicador").value);
-            const multiplicando = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-            document.getElementById("resultado").innerHTML = '';
+        <script>
+            function calcular() {
+                const multiplicador = Number(document.getElementById("multiplicador").value);
+                const multiplicando = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+                document.getElementById("resultado").innerHTML = '';
 
-            for (const numero of multiplicando) {
-                let produto = multiplicador * numero;
-                document.getElementById("resultado").innerHTML += `${multiplicador} * ${numero} = ${produto} <br>`;
+                for (const numero of multiplicando) {
+                    let produto = multiplicador * numero;
+                    document.getElementById("resultado").innerHTML += `${multiplicador} * ${numero} = ${produto} <br>`;
+                }
             }
-        }
-    </script>
+        </script>
+    </main>
 </body>
 
 </html>
